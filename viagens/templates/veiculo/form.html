@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h1>Novo Veiculo</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6">
+            <form action="/viagens/veiculo/create/" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Categoria:</label>
+                    {{form.categoria}}
+                    {{form.categoria.errors}}
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Chassi:</label>
+                    {{form.chassi}}
+                    {{form.chassi.errors}}
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Qtd_pessoas:</label>
+                    {{form.qtd_pessoas}}
+                    {{form.qtd_pessoas.errors}}
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Km_rodados:</label>
+                    {{form.km_rodados}}
+                    {{form.km_rodados.errors}}
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Leito:</label>
+                    {{form.leito}}
+                    {{form.leito.errors}}
+                </div>
+                <button type="submit" class="btn btn-primary">OK</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

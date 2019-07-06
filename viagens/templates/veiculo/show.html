@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h1>Detalhes dos Veiculos</h1>
+<div>
+    <label>Categoria</label>
+    {{veiculo.categoria}}
+</div>
+<div>
+    <label>Chassi:</label>
+    {{veiculo.chassi}}
+</div>
+<div>
+    <label>Qtd_pessoas</label>
+    {{veiculo.qtd_pessoas}}
+</div>
+<div>
+    <label>Km_rodados:</label>
+    {{veiculo.km_rodados}}
+</div>
+<div>
+    <label>Leito:</label>
+    {{veiculo.leito}}
+</div>
+{% endblock %}

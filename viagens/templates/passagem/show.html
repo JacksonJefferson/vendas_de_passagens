@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h1>Detalhes das Passagens</h1>
+<div>
+    <label>Origem</label>
+    {{passagem.origem}}
+</div>
+<div>
+    <label>Destino:</label>
+    {{passagem.destino}}
+</div>
+<div>
+    <label>Poltrona</label>
+    {{passagem.poltrona}}
+</div>
+<div>
+    <label>Valor:</label>
+    {{passagem.valor}}
+</div>
+<div>
+    <label>Data:</label>
+    {{passagem.data}}
+</div>
+{% endblock %}

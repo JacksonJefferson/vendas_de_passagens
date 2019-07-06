@@ -1,7 +1,7 @@
 from django.forms import ModelForm
 from . models import Passagem, Veiculo
 
-class Passagem(ModelForm):
+class PassagemForm(ModelForm):
     class Meta:
         model = Passagem
         fields = '__all__'

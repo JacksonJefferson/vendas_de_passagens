@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<h1>Nova Passagem</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6">
+            <form action="/viagens/passagem/create/" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Origem:</label>
+                    {{form.origem}}
+                    {{form.origem.errors}}
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Destino:</label>
+                    {{form.destino}}
+                    {{form.destino.errors}}
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Poltrona:</label>
+                    {{form.poltrona}}
+                    {{form.poltrona.errors}}
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Valor:</label>
+                    {{form.valor}}
+                    {{form.valor.errors}}
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Data:</label>
+                    {{form.data}}
+                    {{form.data.errors}}
+                </div>
+                <button type="submit" class="btn btn-primary">OK</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
