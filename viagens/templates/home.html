@@ -1,6 +1,63 @@
 {% extends 'base.html' %}
 {% block conteudo %}
 {% load static %}
-<h1>Já é</h1>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="jumbotron">
+                <h1 class="display-4">Bem vindos ao noso site</h1>
+                <p class="lead">Aqui você encontrará passagens com os melhores preços.</p>
+                <hr class="my-4">
+                <p>Não esqueça de reservar seu hotel também.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-4 col-md-4 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Paulistana X Picos
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">R$ 45,00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-4 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Paulistana X Petrolina
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">R$ 50,00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-4 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pauslitana X Teresina
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">R$ 112,00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
