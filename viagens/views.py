@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . models import Passagem, Veiculo
 from . forms import PassagemForm, VeiculoForm
 
@@ -26,14 +26,6 @@ def passagem_form(request):
         return render (request, 'passagem/form.html', {'form': form})
 
 
-def veiculo_list(request):
-    veiculos = Veiculo.objects.all()
-    return render (request, 'veiculo/list.html', {'veiculos': veiculos})
-
-def veiculo_show(request, veiculo_id):
-    veiculo = Veiculo.objects.get(id=veiculo_id)
-    return render (request, 'veiculo/show.html', {'veiculo': veiculo})
-
 def veiculo_form(request):
     if (request.method == "POST"):
         form = VeiculoForm(request.POST)
@@ -45,3 +37,13 @@ def veiculo_form(request):
     else:
         form = VeiculoForm()
         return render (request, 'veiculo/form.html', {'form': form})
+
+
+def veiculo_list(request):
+    veiculos = Veiculo.objects.all()
+    return render (request, 'veiculo/list.html', {'veiculos': veiculos})
+
+def veiculo_show(request, veiculo_id):
+    veiculo = Veiculo.objects.get(id=veiculo_id)
+    return render (request, 'veiculo/show.html', {'veiculo': veiculo})
+

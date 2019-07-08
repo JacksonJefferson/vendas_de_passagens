@@ -8,28 +8,38 @@
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="exampleInputEmail1">Categoria:</label>
-                    {{form.categoria}}
-                    {{form.categoria.errors}}
+                    <div class="col-12">
+                        {{form.categoria}}
+                        {{form.categoria.errors}}
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Chassi:</label>
-                    {{form.chassi}}
-                    {{form.chassi.errors}}
+                    <div class="col-12">
+                        {{form.chassi}}
+                        {{form.chassi.errors}}
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Qtd_pessoas:</label>
-                    {{form.qtd_pessoas}}
-                    {{form.qtd_pessoas.errors}}
+                    <div class="col-12">
+                        {{form.qtd_pessoas}}
+                        {{form.qtd_pessoas.errors}}
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Km_rodados:</label>
-                    {{form.km_rodados}}
-                    {{form.km_rodados.errors}}
+                    <div class="col-12">
+                        {{form.km_rodados}}
+                        {{form.km_rodados.errors}}
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Leito:</label>
-                    {{form.leito}}
-                    {{form.leito.errors}}
+                    <div class="col-12">
+                        {{form.leito}}
+                        {{form.leito.errors}}
+                    </div>
                 </div>
                 <button type="submit" class="btn btn-primary">OK</button>
             </form>
